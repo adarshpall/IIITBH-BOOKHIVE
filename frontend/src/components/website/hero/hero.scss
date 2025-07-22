@@ -1,0 +1,52 @@
+@import "../../../scss/responsive.scss";
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 50px;
+  padding: 100px 50px;
+  @include md {
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .content {
+    h1 {
+      margin-bottom: 6px;
+      width: fit-content;
+      @include md {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    p {
+      text-align: justify;
+      line-height: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .btn__read__more {
+      @include md {
+        text-align: center;
+      }
+    }
+  }
+  .image {
+    width: 100%;
+    img {
+      width: 350px;
+      height: 350px;
+      border-radius: 5px;
+
+      @include lg {
+        width: 250px;
+        height: 250px;
+      }
+
+      @include md {
+        width: 100%;
+        margin-top: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import "../../scss/responsive.scss";
+@import "../../scss/variables.scss";
+
+.books__wrapper {
+  display: flex;
+  .sidebar__wrapper {
+    width: 250px;
+    min-height: 100vh;
+
+    @include lg {
+      display: none;
+    }
+    .sidebar__content {
+      padding: 20px;
+
+      h3 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        li {
+          list-style: none;
+          margin: 10px 0;
+          font-size: 15px;
+          label {
+            cursor: pointer;
+            input {
+              margin-right: 8px;
+              cursor: pointer;
+              &:checked {
+                accent-color: $green-accent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    width: 100%;
+    padding: 20px;
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        p {
+          @include md {
+            display: none;
+          }
+        }
+      }
+
+      .input__box {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        column-gap: 15px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        &:focus-within {
+          border: 2px solid $green-accent;
+        }
+
+        input {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+    .books__section {
+      margin: 20px 0;
+      .card__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+
+        @include custom(1500px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include lg {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include sm {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+          border-radius: 4px;
+          transition: $default-transition;
+
+          &:hover {
+            background-color: $green-accent;
+          }
+
+          padding: 20px;
+          img {
+            height: 250px;
+            width: 100%;
+          }
+
+          .content {
+            margin: 20px 0;
+
+            h5{
+              font-size: 18px;
+              margin: 10px 0;
+            }
+            .action {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+      .pagination{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 20px;
+      }
+    }
+  }
+}
+
+.book__detail{
+  padding: 50px 20px;
+  .book__container{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include custom(900px){
+       flex-direction: column;
+       row-gap: 20px;
+    }
+
+    .image{
+      img{
+        width:400px;
+        height: 500px;
+        border-radius: 5px;
+
+        @include md{
+          width: 340px;
+        }
+      }
+    }
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      p{
+        span{
+          font-weight: bold;
+        }
+      }
+
+      h3{
+        color:  $error-color;
+      }
+    }
+  }
+
+  .reviews__container{
+      padding: 10px;
+
+      h1{
+        font-weight: 500;
+        margin: 10px 0;
+      }
+
+      .review{
+        border-bottom: 2px solid $green-accent;
+        padding-bottom: 20px;
+        padding-top: 5px;
+
+        .date{
+          font-size: 14px;
+        }
+      }
+  }
+}

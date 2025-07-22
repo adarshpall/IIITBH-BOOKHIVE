@@ -1,0 +1,45 @@
+@import "../../../scss/responsive.scss";
+
+.issue__book{
+    padding: 10px 20px; 
+    h2{
+        font-weight: 500;
+    }
+    .details__container{
+        display: flex;
+        margin: 30px 0;
+        column-gap: 30px;
+
+        @include md{
+            flex-direction: column;
+        }
+
+        .book__details,.student__details{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            h3{
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            p{
+                font-size: 13px;
+                margin-bottom: 4;
+            }
+
+            .table__wrapper{
+                padding: 0;
+                table{
+                    text-align: left;
+                }
+            }
+
+            input{
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}

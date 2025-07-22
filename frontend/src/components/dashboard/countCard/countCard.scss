@@ -1,0 +1,14 @@
+.count__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 20px;
+
+
+    .link{
+        text-decoration: none;
+        font-size: 15px;
+    }
+}

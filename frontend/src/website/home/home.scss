@@ -1,0 +1,225 @@
+@import "../../scss/responsive.scss";
+@import "../../scss/variables.scss";
+
+/* ################################################## HERO SECTION STYLING ################################################## */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  width: 100%;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  row-gap: 10px;
+
+  h1 {
+    font-size: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    text-align: center;
+
+    @include sm {
+      font-size: 16px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
+
+    @include lg {
+      font-size: 22px;
+    }
+  }
+
+  .subheading {
+    font-size: 18px;
+    text-align: center;
+
+    @include lg {
+      font-size: 16;
+    }
+
+    @include md {
+      font-size: 14px;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+  }
+}
+
+/* HERO BACKGROUND IMAGE FOR LIGHT MODE */
+.light {
+  .hero {
+    background-image: linear-gradient(
+        rgba(242, 240, 240, 0.3),
+        rgba(242, 240, 240, 0.2)
+      ),
+      url("../../assets/hero.jpg");
+  }
+}
+/* HERO BACKGROUND IMAGE FOR DARK MODE */
+.dark {
+  .hero {
+    background-image: linear-gradient(
+        rgba(31, 42, 64, 0.8),
+        rgba(31, 42, 64, 0.8)
+      ),
+      url("../../assets/hero.jpg");
+  }
+}
+
+/*##################################################  WELCOME SECTION STYLING ################################################## */
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 50px;
+  padding: 100px 50px;
+  @include md {
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .left {
+    h1 {
+      
+      margin-bottom: 6px;
+    width: 244px;
+      @include md {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    p {
+      text-align: justify;
+      line-height: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .btn__read__more{
+        @include md{
+            text-align: center;
+        }
+    }
+  }
+  .right {
+    width: 100%;
+    img {
+      width: 350px;
+      height: 350px;
+      border-radius: 5px;
+
+      @include lg {
+        width: 250px;
+        height: 250px;
+      }
+
+      @include md {
+        width: 100%;
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+/*##################################################  POPULAR BOOKS SECTION STYLING ################################################## */
+
+.popular__books {
+  padding: 20px 50px;
+
+  @include md{
+    padding: 20px 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .card__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+
+    @include lg{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include sm{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 4px;
+        transition: $default-transition;
+
+        &:hover{
+            background-color: $green-accent;
+        }
+        
+        padding: 20px;
+        img{
+            height: 300px;
+            width: 100%;
+        }
+
+        .content{
+            margin: 20px 0;
+
+            .action{
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+  }
+  .button{
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+}
+
+
+/*##################################################  COUNTER SECTION STYLING ################################################## */
+
+
+.counter__section{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    margin: 40px 0;
+
+    @include md{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 20px;
+
+
+      .icon{
+        font-size: 40px;
+      }
+
+      p{
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }

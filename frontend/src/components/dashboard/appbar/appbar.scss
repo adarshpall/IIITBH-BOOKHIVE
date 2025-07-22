@@ -1,0 +1,137 @@
+@import "../../../scss/variables.scss";
+@import "../../../scss/responsive.scss";
+
+.appbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .left {
+    display: flex;
+    align-items: center;
+  
+    .logo{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover{
+        color: $green-accent;
+      }
+      
+      .logo__icon {
+        font-size: 30px;
+        @include md{
+          font-size: 24px;
+        }
+      }
+    }
+    span {
+      font-size: 20px;
+      margin-left: 3px;
+      font-weight: 500;
+
+      @include md{
+        font-size: 18px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @include md{
+      column-gap: 5px;
+    }
+    .icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      column-gap: 3px;
+      cursor: pointer;
+      position: relative;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        @include md{
+          width: 30px;
+          height: 30px;
+        }
+      }
+      span {
+        font-size: 15px;
+        margin-left: 3px;
+
+        @include md{
+          font-size: 13px;
+        }
+      }
+
+      // dropdown
+      .dropdown__wrapper{
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        border-radius: 3px;
+        transition: $default-transition;
+
+        .dropdown__content{
+          // padding: 10px;
+          margin: 10px 0;
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+
+          .dropdown__item{
+            display: flex;
+            align-items: center;
+            column-gap: 13px;
+            margin: 2px 0;
+            text-decoration: none;
+            padding: 6px 5px ;
+            .icon{
+              margin-left: 10px;
+            }
+            span{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .dropdown__wrapper__active{
+        max-height: 140px;
+        overflow: hidden;
+        position: absolute;
+      }
+    }
+  }
+
+  .btn__icon {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: $default-transition;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $green-accent;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../scss/responsive.scss";
+
+.admin__home__container{
+    padding: 20px;
+    .card__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+
+        @include md{
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include sm{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    .chart__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        overflow: auto;
+        width: 100%;
+        padding: 20px;
+
+        @include md{
+            flex-direction: column;
+        }
+
+        .barchart__container{
+            height: 400px;
+            width: 600px;
+        }
+
+        .piechart__container{
+            height: 400px;
+        }
+    }
+
+    .recent__transations{
+        h2{
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+}

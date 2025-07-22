@@ -1,0 +1,50 @@
+@import "./variables.scss";
+
+.light {
+    .text__color {
+      color: $light-text-color;
+    }
+    .bg__accent {
+      background: $light-background-accent;
+    }
+    .bg {
+      background: #ffffff;
+    }
+    .bg__secondary {
+      background: $light-blue-accent;
+    }
+  
+    .text__primary {
+      color: $green-accent;
+    }
+  
+    .bg__primary {
+      background: $green-accent;
+    }
+  }
+  
+  .dark {
+    .text__color {
+      color: $dark-text-color;
+    }
+    .bg__accent {
+      background: $dark-background-accent;
+    }
+    .bg {
+      background: $dark-background;
+    }
+    .bg__secondary {
+      background: $dark-blue-accent;
+    }
+  
+    .text__primary {
+      color: $green-accent;
+    }
+    .bg__primary {
+      background: $green-accent;
+    }
+  }
+
+  .text__danger{
+    color: $error-color;
+  }

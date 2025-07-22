@@ -1,0 +1,77 @@
+@import "../../../scss/responsive.scss";
+@import "../../../scss/variables.scss";
+
+
+.book__slider {
+    // background-color: $background-color;
+    margin: 0px 10px;
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 30px 0;
+      position: relative;
+    //   background-color: red;
+      text-align: center;
+
+      .heading{
+        margin-bottom: 40px;
+      }
+      
+      .book__card {
+        max-width: 300px;
+        // background-color: white;
+        border-radius: 3px;
+        // margin-left: 6px;
+        margin-bottom: 10px;
+        @include lg{
+          max-width: 250px;
+        }
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: fill;
+          border-radius: 3px;
+        }
+        .body{
+            padding: 15px 10px;
+            width: 100%;
+            padding-top: 5px;
+            text-align: center;
+
+            h3{
+                margin-bottom: 3px;
+            }
+            p{
+                margin-bottom: 3px;
+            }
+
+            .action{
+                margin: 40px 20px;
+            }
+        }
+      }
+      .btn__circle{
+         width: 30px;
+         height: 30px;
+         background-color: $green-accent;
+         color: white;
+         outline: none;
+         border: none;
+         border-radius: 50%;
+         position: absolute;
+         cursor: pointer;
+         top: 55%;
+         z-index: 111;
+      }
+      .btn__next{
+        right: -35px;
+      }
+      .btn__prev{
+        left: -35px;
+      }
+    }
+  }
+
+  .slick-arrow{
+    display: none;
+  }
