@@ -27,10 +27,13 @@ import { errorHandlerMiddleware } from "./middlewares/index.js";
 const app = express();
 app.use(express.json({ limit: "5mb" }));
 
-const allowedOrigins = [
-  "http://localhost:5173",                // local dev
-  "https://iiitbh-bookhive.netlify.app"   // production frontend
-];
+const corsOptions = {
+  credentials: true,
+   origin: [
+    "http://localhost:5173",
+    "https://your-site.netlify.app"
+  ],
+};
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
