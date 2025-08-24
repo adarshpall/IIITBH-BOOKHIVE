@@ -31,7 +31,7 @@ const corsOptions = {
   credentials: true,
    origin: [
     "http://localhost:5173",
-    "https://your-site.netlify.app"
+    "https://iiitbh-bookhive.netlify.app/"
   ],
 };
 app.use(cors(corsOptions));
