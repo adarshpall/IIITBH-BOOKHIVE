@@ -4,9 +4,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-/* ENV VARIABLES */
+
 import { APP_PORT, MONGO_DB_URI } from "./config/index.js";
-/* IMPORT ALL ROUTES */
+
 import {
   almirahRouter,
   authRouter,
@@ -23,35 +23,49 @@ import {
 } from "./routes/index.js";
 import { errorHandlerMiddleware } from "./middlewares/index.js";
 
-/* CONFIGURATION */
+
 const app = express();
 app.use(express.json({ limit: "5mb" }));
 
+
+const allowedOrigins = [
+  "https://iiitbh-bookhive.netlify.app",
+  "http://localhost:5173",
+];
+
 const corsOptions = {
-  credentials: true,
-  origin: "https://iiitbh-bookhive.netlify.app", 
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true, 
 };
 
 app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-/* ABSOLUTE PATH OF BACKEND FOLDER */
+
 const __filename = fileURLToPath(import.meta.url);
 export const ROOT_PATH = path.dirname(__filename);
-// console.log(ROOT_PATH);
 
-/* STATIC FOLDER */
+
 app.use("/public", express.static("./public"));
 app.use("/uploads", express.static("./uploads"));
 app.use("/documents", express.static("./documents"));
 
-/* MONGOOSE SETUP */
+
 mongoose
   .connect(MONGO_DB_URI)
   .then(() => {
     console.log("MONGO DB CONNECTED SUCCESSFULLY 😍😍");
-    /* CREATE SERVER */
+    
     app.listen(APP_PORT, () => {
       console.log(`SERVER IS LISTNING ON PORT ${APP_PORT}`);
     });
@@ -63,7 +77,7 @@ mongoose
     console.log("====================================");
   });
 
-/* ROUTES */
+
 app.use("/api/auth", authRouter);
 app.use("/api/batches", batchRouter);
 app.use("/api/teachers", teacherRouter);
@@ -77,5 +91,4 @@ app.use("/api/transactions", transactionRouter);
 app.use("/api/genral", genralRouter);
 app.use("/api/clearance", clearanceRouter);
 
-/* ERROR HANLDER MIDDLEWARE */
 app.use(errorHandlerMiddleware);
