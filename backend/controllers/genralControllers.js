@@ -65,7 +65,7 @@ class GenralController {
         await sendMail({
           to: document.email,
           from: ADMIN_MAIL,
-          subject: "Reply from GGC LMS",
+          subject: "Reply from IIITBH BOOKHIVE",
           text: `             
                 Reply From Admin : ${replyMessage}
                 `,

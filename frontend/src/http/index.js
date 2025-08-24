@@ -1,10 +1,10 @@
 import axios from "axios";
 
 // create instance of axios
-export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://iiitbh-bookhive.onrender.com";
 
 export const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://iiitbh-bookhive.onrender.com/api",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
@@ -236,7 +236,7 @@ api.interceptors.response.use(
       originalRequest.isRetry = true;
       // refresh token request
       try {
-        await axios.get("http://localhost:5000/api/auth/refresh-tokens", {
+        await axios.get("https://iiitbh-bookhive.onrender.com/api/auth/refresh-tokens", {
           withCredentials: true,
         });
 

@@ -8,7 +8,7 @@ const AboutUs = () => {
       <Hero
         title="Introduction"
         text={
-          "The Libraries are wonderful gathering places to study, to write and to pursue scholarly research, to learn and use information technology, and draw on collections of printed and electronic resources. The College Library acts as a gateway to information and knowledge. Government Graduate College Jhelum  has a rich Library system "
+          "The Libraries are wonderful gathering places to study, to write and to pursue scholarly research, to learn and use information technology, and draw on collections of printed and electronic resources. The College Library acts as a gateway to information and knowledge. IIITBH  has a rich Library system "
         }
         image={image}
         reverse={true}
@@ -17,7 +17,7 @@ const AboutUs = () => {
       <Hero
         title="Mission"
         text={
-          "The mission of the GGC Library is to achieve excellence in the provision and promotion of information services to meet the research, teaching and learning needs of the College. We are committed to help the students and the faculty to take advantage of these resources. An effective use of information resources is a necessary precondition to an academic success and even throughout life. It is our goal at the libraries to provide excellent service to students and faculty that will advance each user’s learning, teaching, and research experience at the Government Graduate College ,Jhelum."
+          "The mission of the IIITBH  Library is to achieve excellence in the provision and promotion of information services to meet the research, teaching and learning needs of the College. We are committed to help the students and the faculty to take advantage of these resources. An effective use of information resources is a necessary precondition to an academic success and even throughout life. It is our goal at the libraries to provide excellent service to students and faculty that will advance each user’s learning, teaching, and research experience at the INDIAN INSTITUTE OF INFORMATION TECHONOLOGY ,BHAGALPUR ."
         }
         image={image}
       />
@@ -25,7 +25,7 @@ const AboutUs = () => {
       <Hero
         title="Collection"
         text={
-          "The GGC Library collection of scholarly materials catering to the needs of the College Community, comprising students to staff members, teachers/scholars, and visiting researchers. Total Collection of all the libraries are about 25000/ volumes. The Libraries vary widely in size and quantity of their stock but include well organized collections of considerable value. Our book collection contains rare editions, reference volumes, critical guides and latest releases. We have a large collection of research journals/periodicals including magazines."
+          "The IIITBH  Library collection of scholarly materials catering to the needs of the College Community, comprising students to staff members, teachers/scholars, and visiting researchers. Total Collection of all the libraries are about 25000/ volumes. The Libraries vary widely in size and quantity of their stock but include well organized collections of considerable value. Our book collection contains rare editions, reference volumes, critical guides and latest releases. We have a large collection of research journals/periodicals including magazines."
         }
         image={image}
         reverse={true}
