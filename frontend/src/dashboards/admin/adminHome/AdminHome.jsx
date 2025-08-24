@@ -1,4 +1,4 @@
-import "./adminhome.scss";
+import "./adminHome.scss";
 import { BarChart, CountCard, Loader, PieChart } from "../../../components";
 import { useEffect, useState } from "react";
 import { STATUSES, getAdminDashboardStats } from "../../../http";
