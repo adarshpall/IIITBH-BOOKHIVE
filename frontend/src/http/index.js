@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // create instance of axios
-export const BASE_URL = "https://iiitbh-bookhive.onrender.com";
+export const BASE_URL = "https://iiitbh-bookhive.onrender.com ";
 
 export const api = axios.create({
   baseURL: "https://iiitbh-bookhive.onrender.com/api",
@@ -236,7 +236,7 @@ api.interceptors.response.use(
       originalRequest.isRetry = true;
       // refresh token request
       try {
-        await axios.get("https://iiitbh-bookhive.onrender.com/api/auth/refresh-tokens", {
+        await axios.get("https://iiitbh-bookhive.onrender.com /api/auth/refresh-tokens", {
           withCredentials: true,
         });
 
