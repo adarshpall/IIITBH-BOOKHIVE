@@ -29,7 +29,7 @@ app.use(express.json({ limit: "5mb" }));
 
 const corsOptions = {
   credentials: true,
-  origin: true, 
+  origin: "https://iiitbh-bookhive.netlify.app", 
 };
 
 app.use(cors(corsOptions));
