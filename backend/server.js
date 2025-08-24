@@ -29,11 +29,9 @@ app.use(express.json({ limit: "5mb" }));
 
 const corsOptions = {
   credentials: true,
-   origin: [
-    "http://localhost:5173",
-    "https://iiitbh-bookhive.netlify.app/"
-  ],
+  origin: true, 
 };
+
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
