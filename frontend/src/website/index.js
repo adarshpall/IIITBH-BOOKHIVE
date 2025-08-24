@@ -7,7 +7,7 @@ import NewPassword from "./auth/NewPassword";
 import Books from "./books/Books";
 import EBooks from "./books/Ebooks";
 import ContactUs from "./contactUs/ContactUs";
-import AboutUs from "./aboutUs/ AboutUs";
+import AboutUs from "./aboutUs/AboutUs";
 import BookDetail from "./books/BookDetail";
 import EBookDetail from "./books/EBookDetail";
 import BookReader from "./bookReader/BookReader";
